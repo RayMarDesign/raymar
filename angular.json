@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "sprint-naming": "apps/sprint-naming",
+    "sprint-naming-e2e": "apps/sprint-naming-e2e"
+  }
+}

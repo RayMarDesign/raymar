@@ -1,0 +1,28 @@
+{
+  "root": "apps/sprint-naming-e2e",
+  "sourceRoot": "apps/sprint-naming-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/sprint-naming-e2e/cypress.json",
+        "devServerTarget": "sprint-naming:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "sprint-naming:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/sprint-naming-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["sprint-naming"]
+}
