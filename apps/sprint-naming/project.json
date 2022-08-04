@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/sprint-naming",
         "index": "apps/sprint-naming/src/index.html",
@@ -17,7 +19,10 @@
           "apps/sprint-naming/src/favicon.ico",
           "apps/sprint-naming/src/assets"
         ],
-        "styles": ["apps/sprint-naming/src/styles.scss"],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+          "apps/sprint-naming/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -85,7 +90,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/sprint-naming"],
+      "outputs": [
+        "coverage/apps/sprint-naming"
+      ],
       "options": {
         "jestConfig": "apps/sprint-naming/jest.config.ts",
         "passWithNoTests": true
