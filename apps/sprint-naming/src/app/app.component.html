@@ -1,10 +1,40 @@
-<raymar-header></raymar-header>
-<div style="text-align: center">
-  <h1>Welcome to sprint-naming!</h1>
-  <img
-    width="450"
-    src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-    alt="Nx - Smart, Fast and Extensible Build System"
-  />
-</div>
-<div>Message: {{ hello$ | async | json }}</div>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #menu
+    class="sidenav"
+    mode="side"
+    opened
+  >
+    <mat-nav-list>
+      <mat-list-item
+        (click)="menu.toggle()"
+      >
+        <mat-icon mat-list-icon>menu</mat-icon>
+      </mat-list-item>
+      <mat-list-item
+        routerLink="home"
+      >
+        <mat-icon mat-list-icon>home</mat-icon>
+        <div>Home</div>
+      </mat-list-item>
+      <mat-list-item
+        routerLink="list"
+      >
+        <mat-icon mat-list-icon>list_alt</mat-icon>
+        <div>Suggestions</div>
+      </mat-list-item>
+      <mat-list-item
+        routerLink="vote"
+      >
+        <mat-icon mat-list-icon>ballot</mat-icon>
+        <div>Voting</div>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span>Sprint Naming</span>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
