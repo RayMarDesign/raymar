@@ -10,15 +10,15 @@
 <mat-sidenav-container>
   <mat-sidenav #menuDrawer rail-mode opened>
     <mat-nav-list class="dashboard">
-      <mat-list-item>
+      <mat-list-item routerLink="/home">
         <mat-icon mat-list-icon>home</mat-icon>
         <span mat-line>Home</span>
       </mat-list-item>
-      <mat-list-item>
+      <mat-list-item routerLink="/list">
         <mat-icon mat-list-icon>list_alt</mat-icon>
         <span mat-line>Suggestions</span>
       </mat-list-item>
-      <mat-list-item>
+      <mat-list-item routerLink="/vote">
         <mat-icon mat-list-icon>check</mat-icon>
         <span mat-line>Vote</span>
       </mat-list-item>
@@ -26,11 +26,6 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime unde nesciunt veniam. Possimus nesciunt sapiente quis, eos harum id eligendi odit labore, dolorem, ratione quisquam asperiores soluta sit cum.</p>
-    <p>Amet aperiam quaerat architecto maxime nesciunt vitae illum maiores eos laborum inventore eligendi quo harum ipsa voluptates, quam quas non quidem minima repellendus voluptate a! Dolor nam amet sint animi?</p>
-    <p>Odit sunt optio magnam et eveniet voluptate, exercitationem corporis dolore asperiores mollitia natus alias, reprehenderit repellat consequatur culpa, nostrum quis ipsum? Sapiente dolores quidem neque impedit ipsum iste assumenda officia?</p>
-    <p>Est vero nam et voluptatibus accusantium rem tempora eum atque placeat. Dolore excepturi porro corrupti libero voluptate veritatis praesentium id iusto cupiditate placeat natus, soluta, cumque numquam iste ipsam. Delectus.</p>
-    <p>Inventore vero qui temporibus praesentium nisi ad est tempora doloribus adipisci minus error vel nobis laboriosam aut accusantium, iure odit nihil vitae, quam, cupiditate odio totam voluptatem. Ab, ut odit!</p>
-    <p>Repudiandae, quia non laudantium deserunt adipisci sapiente fugiat illo quo consequuntur ut. Reiciendis voluptas optio ad adipisci, veniam alias accusamus numquam vel ratione hic totam porro. Veniam optio sed eaque.</p>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
