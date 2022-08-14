@@ -10,6 +10,15 @@
 <mat-sidenav-container>
   <mat-sidenav #menuDrawer rail-mode opened>
     <mat-nav-list class="dashboard">
+      <mat-list-item routerLink="/user">
+        <mat-icon mat-list-icon>person</mat-icon>
+        <span mat-line>Profile</span>
+      </mat-list-item>
+      <mat-list-item routerLink="/admin">
+        <mat-icon mat-list-icon>admin_panel_settings</mat-icon>
+        <span mat-line>Admin</span>
+      </mat-list-item>
+      <mat-divider></mat-divider>
       <mat-list-item routerLink="/home">
         <mat-icon mat-list-icon>home</mat-icon>
         <span mat-line>Home</span>
