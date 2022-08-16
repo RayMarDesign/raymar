@@ -10,24 +10,39 @@
 <mat-sidenav-container>
   <mat-sidenav #menuDrawer rail-mode opened>
     <mat-nav-list class="dashboard">
-      <mat-list-item routerLink="/user">
+      <mat-list-item
+        title="Profile"
+        routerLink="/user"
+      >
         <mat-icon mat-list-icon>person</mat-icon>
         <span mat-line>Profile</span>
       </mat-list-item>
-      <mat-list-item routerLink="/admin">
+      <mat-list-item
+        title="Admin"
+        routerLink="/admin"
+      >
         <mat-icon mat-list-icon>admin_panel_settings</mat-icon>
         <span mat-line>Admin</span>
       </mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item routerLink="/home">
+      <mat-list-item
+        title="Home"
+        routerLink="/home"
+      >
         <mat-icon mat-list-icon>home</mat-icon>
         <span mat-line>Home</span>
       </mat-list-item>
-      <mat-list-item routerLink="/list">
+      <mat-list-item
+        title="Suggestions"
+        routerLink="/list"
+      >
         <mat-icon mat-list-icon>list_alt</mat-icon>
         <span mat-line>Suggestions</span>
       </mat-list-item>
-      <mat-list-item routerLink="/vote">
+      <mat-list-item
+        title="Vote"
+        routerLink="/vote"
+      >
         <mat-icon mat-list-icon>check</mat-icon>
         <span mat-line>Vote</span>
       </mat-list-item>

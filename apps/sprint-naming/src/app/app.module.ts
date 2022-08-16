@@ -16,6 +16,7 @@ import { MenuComponent } from './menu/menu.component';
 import { SuggestionsComponent } from './suggestions/suggestions.component';
 import { AppRoutingModule } from './app-routing.module';
 import { VotingComponent } from './voting/voting.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { VotingComponent } from './voting/voting.component';
     MatIconModule,
     MatListModule,
     MatSidenavModule,
+    ScrollingModule,
     DrawerRailModule,
     MatToolbarModule,
     AppRoutingModule,

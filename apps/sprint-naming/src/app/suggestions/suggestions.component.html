@@ -1,1 +1,18 @@
-<p>suggestions works!</p>
+<mat-selection-list #list
+  [multiple]="false"
+  (selectionChange)="onSelectionChange($event)"
+>
+  <cdk-virtual-scroll-viewport
+    itemSize="48"
+  >
+    <mat-list-option
+      *cdkVirtualFor="let suggestion of suggestions"
+      [value]="suggestion"
+      [selected]="selection.isSelected(suggestion)"
+    >
+      {{ suggestion }}
+    </mat-list-option>
+  </cdk-virtual-scroll-viewport>
+</mat-selection-list>
+
+<p>Selected: {{ selected }}</p>
