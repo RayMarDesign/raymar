@@ -1,18 +1,24 @@
-<mat-selection-list #list
-  [multiple]="false"
-  (selectionChange)="onSelectionChange($event)"
->
-  <cdk-virtual-scroll-viewport
-    itemSize="48"
+<div class="area-list">
+  <h2>Suggestions</h2>
+
+  <mat-selection-list #list
+    [multiple]="false"
+    (selectionChange)="onSelectionChange($event)"
   >
-    <mat-list-option
-      *cdkVirtualFor="let suggestion of suggestions"
-      [value]="suggestion"
-      [selected]="selection.isSelected(suggestion)"
+    <cdk-virtual-scroll-viewport
+      itemSize="48"
     >
-      {{ suggestion }}
-    </mat-list-option>
-  </cdk-virtual-scroll-viewport>
-</mat-selection-list>
+      <mat-list-option
+        *cdkVirtualFor="let suggestion of suggestions"
+        [value]="suggestion"
+        [selected]="selection.isSelected(suggestion)"
+      >
+        {{ suggestion }}
+      </mat-list-option>
+    </cdk-virtual-scroll-viewport>
+  </mat-selection-list>
+</div>
 
 <p>Selected: {{ selected }}</p>
+
+<span>Form Placeholder</span>
