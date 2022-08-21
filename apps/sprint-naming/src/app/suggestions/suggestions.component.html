@@ -1,4 +1,4 @@
-<div class="area-list" cdkVirtualScrollingElement>
+<div class="suggestions-list" cdkVirtualScrollingElement>
   <h2 mat-subheader>Suggestions</h2>
 
   <mat-selection-list #list
@@ -19,6 +19,14 @@
   </mat-selection-list>
 </div>
 
-<p>Selected: {{ selected }}</p>
+<button
+  mat-raised-button
+  color="primary"
+  class="add-suggestion"
+  (click)="openSuggestionModal()"
+>
+  Add a Suggestion
+</button>
 
-<span>Form Placeholder</span>
+<p class="suggestion-details">Selected: <strong>{{ selected }}</strong></p>
+

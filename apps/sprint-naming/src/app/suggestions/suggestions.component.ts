@@ -19,7 +19,7 @@ export class SuggestionsComponent {
   //   'Fifth'
   // ];
 
-  readonly suggestions: string[] = Array.from({length: 1000}).map((_, i) => `Item #${i}`);
+  readonly suggestions: string[] = Array.from({length: 10000}).map((_, i) => `Item #${i}`);
 
   selection = new SelectionModel<string>(false);
 
@@ -30,5 +30,9 @@ export class SuggestionsComponent {
   onSelectionChange(selection: MatSelectionListChange) {
     this.selection.select(selection.options[0].value);
     console.log(this.selection.selected);
+  }
+
+  openSuggestionModal() {
+    console.log(`I've been clicked!!!`);
   }
 }

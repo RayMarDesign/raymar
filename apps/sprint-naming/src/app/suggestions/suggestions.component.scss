@@ -1,19 +1,25 @@
 :host {
   display: grid;
-  grid-template-columns: auto 450px;
-  grid-template-rows: 100px auto;
+  grid-template-columns: min(400px, 50%) 1fr;
+  grid-template-rows: min-content auto;
   grid-template-areas:
     "list add"
     "list details";
-  width: 100%;
-  max-width: 1000px;
   height: 100%;
-  gap: 8px;
   box-sizing: border-box;
   margin: 0 auto;
+
+  @media screen and (max-width: 767px) {
+    grid-template-columns: auto;
+    grid-template-rows: min-content auto min-content;
+    grid-template-areas:
+      "add"
+      "list"
+      "details";
+  }
 }
 
-.area-list {
+.suggestions-list {
   grid-area: list;
 
   [mat-subheader] {
@@ -30,10 +36,14 @@
   }
 }
 
-p {
-  grid-area: details;
+.add-suggestion {
+  grid-area: add;
+  margin: 16px;
+  margin-bottom: 0;
 }
 
-span {
-  grid-area: add;
+.suggestion-details {
+  grid-area: details;
+  margin: 16px;
 }
+
